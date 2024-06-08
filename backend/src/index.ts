@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 import TCGdex from "@tcgdex/sdk";
 
 const app = express();
 const port = 3001;
+
+app.use(cors()); // Enable CORS for all routes
 
 const tcgdex = new TCGdex("en");
 
